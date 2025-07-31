@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ - AI Cough Analyzer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: #1b98e0;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a.active,
+    nav a[aria-current="page"] {
+      color: #6c2bd9;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 15px;
+      padding: 30px 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #00adb5;
+      margin-bottom: 20px;
+    }
+
+    .faq-item {
+      margin-bottom: 25px;
+    }
+
+    .faq-item .question {
+      color: #6c2bd9;
+      font-weight: 600;
+    }
+
+    .faq-item .answer {
+      color: #00adb5;
+      margin-top: 5px;
+      font-weight: 400;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      nav a {
+        margin-left: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">AI Cough Analyzer</div>
+    <nav>
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('predict_form') }}">Predict</a>
+      <a href="{{ url_for('faq') }}">FAQ</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Got Questions? Here's What to Know</h2>
+
+    <div class="faq-item">
+      <div class="question">Q1: What does this tool actually do?</div>
+      <div class="answer">A: It analyzes your cough sound along with basic symptoms — including age, body temperature, weight, smoking status, and how long the cough has lasted — to assess the likelihood of pulmonary tuberculosis (TB). It then gives a result of either
+        “Probable TB” or “Unlikely TB” to help guide your next steps...</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">Q2: Can it tell me if I have a disease?</div>
+      <div class="answer">A: It provides a possible condition based on the cough sound and personal info, but it’s not a medical diagnosis. Always see a healthcare professional to confirm.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">Q3: Who is this tool for?</div>
+      <div class="answer">A: Anyone can use it — individuals, health workers in remote settings, or researchers running health studies.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">Q4: What makes it reliable?</div>
+      <div class="answer">A: It uses trained algorithms that learn from real cough samples. Accuracy improves with clear recordings and accurate patient info.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">Q5: Does it track my health over time?</div>
+      <div class="answer">A: Yes, if you use it regularly, you can monitor how your cough is changing, which can help during treatment or recovery.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">Q6: Will my data be saved?</div>
+      <div class="answer">A: Your recordings and details are only saved if you choose to. Nothing is stored by default.</div>
+    </div>
+  </div>
+
+</body>
+</html>
